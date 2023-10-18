@@ -2,9 +2,9 @@ export const Friends = ({ dataFriends }) => {
   return (
     <ul class="friend-list">
       {dataFriends.map(({ avatar, name, isOnline, id }) => (
-        <li class="friends-item" key={id}>
-          <div class="friends-online">{isOnline}</div>
-          <img class="friends-img" src={avatar} alt={name} />
+        <li class="item" key={id}>
+          <span class="status">{isOnline}</span>
+          <img class="avatar" src={avatar} alt={name} width="48" />
           <p class="friends-name">{name}</p>
         </li>
       ))}
