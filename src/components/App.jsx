@@ -6,10 +6,11 @@ import { Friends } from './friends/Friends';
 import dataFriends from '../assets/friends.json';
 import { Transactions } from './transaction-history/Transactions';
 import dataTransactions from '../assets/transactions.json';
+import appCss from './App.module.css';
 
 export const App = () => {
   return (
-    <div>
+    <div className={appCss.wrapper}>
       <Profile dataUser={dataUser} />
       <Statictics title="UPLOAD STATS" dataStatistics={dataStatistics} />
       <Friends dataFriends={dataFriends} />
