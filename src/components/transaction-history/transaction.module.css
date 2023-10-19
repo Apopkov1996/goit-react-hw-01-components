@@ -1,0 +1,29 @@
+.transaction_history {
+  width: 380px;
+  border-collapse: collapse;
+
+  border: 1px solid gray;
+  padding: 10px 15px;
+}
+
+.header {
+  background: lightblue;
+  font-weight: bold;
+  height: 30px;
+
+  padding: 8px;
+  border: 1px solid gray;
+}
+
+.table_row {
+  background: rgb(178, 178, 221);
+}
+
+.table_row_even {
+  background: rgb(161, 161, 255);
+}
+
+.table_cell {
+  padding: 8px;
+  border: 1px solid gray;
+}
