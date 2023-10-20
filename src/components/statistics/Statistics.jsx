@@ -2,6 +2,15 @@ import statcss from './statistics.module.css';
 
 import PropTypes from 'prop-types';
 
+function getRandomColor() {
+  const letters = '0123456789ABCDEF';
+  let color = '#';
+  for (let i = 0; i < 6; i++) {
+    color += letters[Math.floor(Math.random() * 16)];
+  }
+  return color;
+}
+
 export const Statistics = ({
   title = 'Here must be Title',
   dataStatistics,
@@ -12,7 +21,11 @@ export const Statistics = ({
 
       <ul className={statcss.list}>
         {dataStatistics.map(({ id, label, percentage }) => (
-          <li className={statcss.item} key={id}>
+          <li
+            style={{ backgroundColor: getRandomColor() }}
+            className={statcss.item}
+            key={id}
+          >
             <span className={statcss.label}>{label}</span>
             <span className={statcss.percentage}>{percentage}%</span>
           </li>
